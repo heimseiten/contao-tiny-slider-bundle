@@ -1,0 +1,59 @@
+<?php 
+  $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotinyslider/dist/tiny-slider.css|static'; 
+  $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotinyslider/tinyslider.scss|static'; 
+?>
+
+<script defer src="bundles/heimseitencontaotinyslider/dist/min/tiny-slider.js"></script>
+<script type="module">
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    var e = document.querySelectorAll('.content-slider, .slider-control'), c, i;
+    for (i=0; i<e.length; i+=2) {
+      c = e[i].getAttribute('data-config').split(',');
+      let autoplay_setting = false;
+      let loop_setting = false;
+      let show_nav = false;
+      let slider_items = '1';
+      if ( parseInt(c[0]) >= 1 ){ autoplay_setting = true }
+      if ( parseInt(c[3]) == 1 ){ loop_setting = true }
+      if ( parseInt(c[4]) == 1 ){ show_nav = true }
+      if ( !isNaN( parseInt(c[5]) ) ){ 
+        if ( parseInt(c[5]) != '0' ){ slider_items = parseInt(c[5]) }
+      }
+
+      var slider = tns({
+        container: e[i].firstElementChild,
+        items: slider_items,
+        slideBy: 'page',
+        mode: c[6],
+        nav: show_nav,
+        navPosition: 'bottom',
+        //navContainer:'.tns-thumbs .slider-wrapper',
+        //navAsThumbnails: true,
+        arrowKeys: true,
+        speed: parseInt(c[1]),
+        autoplay: autoplay_setting,
+        autoplayTimeout: parseInt(c[0]) + parseInt(c[1]),
+        autoplayButtonOutput: false,
+        loop: loop_setting,
+        startIndex: parseInt(c[2])
+      });
+    }
+    
+    //var cln = document.querySelector('.tns-inner').cloneNode(true);
+    //cln.classList.remove('tns-inner');
+    //cln.classList.add('tns-thumbs');
+    //document.querySelector('.tns-outer').appendChild(cln);    
+
+  });
+</script>
+
+
+<div class="<?= $this->class ?> block<?php if ($this->slider_full_height): ?> full_height<?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <?php if ($this->headline): ?>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+  <?php endif; ?>
+
+  <div class="content-slider" data-config="<?= $this->config ?>,<?= $this->slider_show_nav ?>,<?= $this->slider_items ?>,<?= $this->slider_mode ?>" style="--sliderDelay:<?= $this->sliderDelay ?>; --sliderSpeed:<?= $this->sliderSpeed ?>">
+    <div class="slider-wrapper<?php if ($this->slider_ken_burns): ?> ken_burns<?php endif; ?><?php if ($this->slider_animate_captions): ?> animate_text<?php endif; ?>">
+      
