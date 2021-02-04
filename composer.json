@@ -2,10 +2,7 @@
     "name": "heimseiten/contao-tiny-slider-bundle",
     "description": "Ersetzt den standard Contao-Slider mit dem Tiny Slider und fügt Funktionen hinzu wie Fade und Ken-Burns-Effekt.",
     "keywords": [
-        "contao",
-        "bundle",
-        "tag 3",
-        "tag 4"
+        "slider"
     ],
     "type": "contao-bundle",
     "license": "GPL-3.0-or-later",
@@ -22,7 +19,7 @@
         "source": "https://github.com/heimseiten/contao-tiny-slider-bundle"
     },
     "require": {
-        "contao/core-bundle": "^4.9"
+        "contao/core-bundle": "^4.4"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^3.0",
@@ -48,6 +45,5 @@
     },
     "extra": {
         "contao-manager-plugin": "Heimseiten\\ContaoTinySliderBundle\\ContaoManager\\Plugin"
-    },
-    "version": "1.0.0"
+    }
 }
