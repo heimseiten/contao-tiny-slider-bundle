@@ -6,7 +6,7 @@
 <script defer src="bundles/heimseitencontaotinyslider/dist/min/tiny-slider.js"></script>
 <script type="module">
   document.addEventListener("DOMContentLoaded", function(event) { 
-    var e = document.querySelectorAll('.content-slider, .slider-control'), c, i;
+    var e = document.querySelectorAll('.content-slider.id_<?php echo $this->id; ?>'), c, i;
     for (i=0; i<e.length; i+=2) {
       c = e[i].getAttribute('data-config').split(',');
       let autoplay_setting = false;
@@ -54,6 +54,6 @@
     <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
   <?php endif; ?>
 
-  <div class="content-slider" data-config="<?= $this->config ?>,<?= $this->slider_show_nav ?>,<?= $this->slider_items ?>,<?= $this->slider_mode ?>" style="--sliderDelay:<?= $this->sliderDelay ?>; --sliderSpeed:<?= $this->sliderSpeed ?>">
+  <div class="content-slider id_<?php echo $this->id; ?>" data-config="<?= $this->config ?>,<?= $this->slider_show_nav ?>,<?= $this->slider_items ?>,<?= $this->slider_mode ?>" style="--sliderDelay:<?= $this->sliderDelay ?>; --sliderSpeed:<?= $this->sliderSpeed ?>">
     <div class="slider-wrapper<?php if ($this->slider_ken_burns): ?> ken_burns<?php endif; ?><?php if ($this->slider_animate_captions): ?> animate_text<?php endif; ?>">
       
