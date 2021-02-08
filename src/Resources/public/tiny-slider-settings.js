@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-  var e = document.querySelectorAll('.content-slider.id_<?php echo $this->id; ?>'), c, i;
-  for (i=0; i<e.length; i+=2) {
+  var e = document.querySelectorAll('.content-slider'), c, i;
+  for (i=0; i<e.length; i++) {
     c = e[i].getAttribute('data-config').split(',');
     let autoplay_setting = false;
     let loop_setting = false;
