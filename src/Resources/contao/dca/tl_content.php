@@ -26,6 +26,12 @@ use Contao\DataContainer;
         'eval'      => array('tl_class' => 'w50 cbx'),
         'sql'       => "char(1) NOT NULL default ''" 
     ];
+    $GLOBALS['TL_DCA']['tl_content']['fields']['slider_animation_direction'] = [ 
+        'label'     => &$GLOBALS['TL_LANG']['tl_content']['slider_animation_direction'], 
+        'inputType' => 'checkbox', 
+        'eval'      => array('tl_class' => 'w50 cbx'),
+        'sql'       => "char(1) NOT NULL default ''" 
+    ];
     $GLOBALS['TL_DCA']['tl_content']['fields']['slider_items'] = [ 
         'label'     => &$GLOBALS['TL_LANG']['tl_content']['slider_items'], 
         'inputType' => 'text', 
@@ -46,6 +52,7 @@ use Contao\DataContainer;
     PaletteManipulator::create()
     ->addField('slider_items', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_mode', 'slider_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('slider_animation_direction', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_full_height', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_ken_burns', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_animate_captions', 'slider_legend', PaletteManipulator::POSITION_APPEND)
