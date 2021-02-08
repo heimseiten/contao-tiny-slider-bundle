@@ -6,5 +6,5 @@
     $GLOBALS['TL_LANG']['tl_content']['slider_ken_burns'] = array ( 'Ken-Burns-Effekt aktivieren', '' );
     $GLOBALS['TL_LANG']['tl_content']['slider_full_height'] = array ( 'Slider an Bildschirmhöhe ausrichten', '' );
     $GLOBALS['TL_LANG']['tl_content']['slider_animate_captions'] = array ( 'Texte animieren', '' );
-    $GLOBALS['TL_LANG']['tl_content']['slider_animation_direction'] = array ( 'verticale Animation', '' );
+    $GLOBALS['TL_LANG']['tl_content']['slider_animation_direction'] = array ( 'vertikale Animation', '' );
     
