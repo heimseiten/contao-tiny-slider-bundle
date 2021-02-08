@@ -43,12 +43,6 @@ use Contao\DataContainer;
         'sql'       => "char(10) NOT NULL default ''" 
     ];
     
-    $GLOBALS['TL_DCA']['tl_content']['fields']['sliderDelay']['default'] = '4000';
-    $GLOBALS['TL_DCA']['tl_content']['fields']['sliderSpeed']['default'] = '1500';
-    $GLOBALS['TL_DCA']['tl_content']['fields']['sliderContinuous']['default'] = true;
-    $GLOBALS['TL_DCA']['tl_content']['fields']['slider_items']['default'] = '1';
-    $GLOBALS['TL_DCA']['tl_content']['fields']['slider_mode']['default'] = 'gallery';
-    
     PaletteManipulator::create()
     ->addField('slider_items', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_mode', 'slider_legend', PaletteManipulator::POSITION_APPEND)
