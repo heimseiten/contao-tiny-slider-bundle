@@ -38,6 +38,12 @@ use Contao\DataContainer;
         'eval'      => array('tl_class' => 'w50'),
         'sql'       => "char(2) NOT NULL default ''" 
     ];
+    $GLOBALS['TL_DCA']['tl_content']['fields']['slider_items_resp'] = [ 
+        'label'     => &$GLOBALS['TL_LANG']['tl_content']['slider_items_resp'], 
+        'inputType' => 'text', 
+        'eval'      => array('tl_class' => 'w50'),
+        'sql'       => "char(2) NOT NULL default ''" 
+    ];
     $GLOBALS['TL_DCA']['tl_content']['fields']['slider_mode'] = [ 
         'label'     => &$GLOBALS['TL_LANG']['tl_content']['slider_mode'], 
         'inputType' => 'radio',
@@ -51,6 +57,7 @@ use Contao\DataContainer;
     
     PaletteManipulator::create()
     ->addField('slider_items', 'slider_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('slider_items_resp', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_mode', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_animation_direction', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_full_height', 'slider_legend', PaletteManipulator::POSITION_APPEND)

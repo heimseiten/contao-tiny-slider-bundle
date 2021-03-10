@@ -11,6 +11,6 @@
     <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
   <?php endif; ?>
 
-  <div class="content-slider id_<?php echo $this->id; ?>" data-config="<?= $this->config ?>,<?= $this->slider_show_nav ?>,<?= $this->slider_items ?>,<?= $this->slider_mode ?>,<?= $this->slider_animation_direction ?>" style="--sliderDelay:<?= $this->sliderDelay ?>; --sliderSpeed:<?= $this->sliderSpeed ?>">
+  <div class="content-slider id_<?php echo $this->id; ?>" data-config="<?= $this->config ?>,<?= $this->slider_show_nav ?>,<?= $this->slider_items ?>,<?= $this->slider_mode ?>,<?= $this->slider_animation_direction ?>,<?= $this->slider_items_resp ?>" style="--sliderDelay:<?= $this->sliderDelay ?>; --sliderSpeed:<?= $this->sliderSpeed ?>">
     <div class="slider-wrapper<?php if ($this->slider_ken_burns): ?> ken_burns<?php endif; ?><?php if ($this->slider_animate_captions): ?> animate_text<?php endif; ?>">
       
