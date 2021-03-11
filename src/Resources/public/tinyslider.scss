@@ -6,10 +6,6 @@ body.ios .ce_sliderStart .animate_text .tns-slide-active {
 }
 .full_width .ce_sliderStart { img { width: 100%; } }
 .ce_sliderStart { position: relative;
-	&.under_header { margin-top: calc( var(--header_height) * -1 ) !important; @media(max-width:1023px){ margin-top: calc(var(--header_height_mobile) * -1) !important; } }
-	//.ce_image h2, .ce_text .text { position: absolute; right: 20%; top: 60px; color: #fff; font-size: 14px; text-align: center; strong { font-size: 25px; font-weight: 300; line-height: 1; } 
-	//	@media(max-width:1023px){ font-size: 10px; }
-	//}
 	.animate_text .tns-slide-active {
 		&.ce_text .text, &.ce_player .video_container .caption { z-index: 9;
 			p { animation: slide_in_and_out calc( ( var(--sliderSpeed) + var(--sliderDelay) ) / 1000 * 1s) ease-in-out forwards; 

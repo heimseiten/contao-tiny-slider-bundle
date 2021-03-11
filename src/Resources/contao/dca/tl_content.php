@@ -44,6 +44,12 @@ use Contao\DataContainer;
         'eval'      => array('tl_class' => 'w50'),
         'sql'       => "char(2) NOT NULL default ''" 
     ];
+    $GLOBALS['TL_DCA']['tl_content']['fields']['transition_timing_function'] = [ 
+        'label'     => &$GLOBALS['TL_LANG']['tl_content']['transition_timing_function'], 
+        'inputType' => 'text', 
+        'eval'      => array('tl_class' => 'w50'),
+        'sql'       => "char(20) NOT NULL default ''" 
+    ];
     $GLOBALS['TL_DCA']['tl_content']['fields']['slider_mode'] = [ 
         'label'     => &$GLOBALS['TL_LANG']['tl_content']['slider_mode'], 
         'inputType' => 'radio',
@@ -59,6 +65,7 @@ use Contao\DataContainer;
     ->addField('slider_items', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_items_resp', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_mode', 'slider_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('transition_timing_function', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_animation_direction', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_full_height', 'slider_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('slider_ken_burns', 'slider_legend', PaletteManipulator::POSITION_APPEND)
