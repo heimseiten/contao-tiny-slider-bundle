@@ -1,8 +1,8 @@
 <?php 
   $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotinyslider/dist/tiny-slider.css|static'; 
   $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotinyslider/tinyslider.scss|static'; 
-  $GLOBALS['TL_HEAD'][] = '<script defer src="/bundles/heimseitencontaotinyslider/dist/min/tiny-slider.js"></script>'; 
-  $GLOBALS['TL_HEAD'][] = '<script defer src="/bundles/heimseitencontaotinyslider/tiny-slider-settings.js"></script>'; 
+  $GLOBALS['TL_BODY'][] = '<script defer src="/bundles/heimseitencontaotinyslider/dist/min/tiny-slider.js"></script>'; 
+  $GLOBALS['TL_BODY'][] = '<script defer src="/bundles/heimseitencontaotinyslider/tiny-slider-settings.js"></script>'; 
 ?>
 
 <div class="<?= $this->class ?> block<?php if ($this->slider_full_height): ?> full_height<?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
