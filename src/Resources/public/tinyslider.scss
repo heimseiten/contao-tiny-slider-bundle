@@ -68,7 +68,7 @@ body.ios .ce_sliderStart .animate_text .tns-slide-active {
 		}
 	}
 	.tns-nav { position: relative; z-index: 10; text-align: center; margin-top: -40px;
-		button { width: 5px; height: 14px; border-radius: 50%; background: rgba(221, 221, 221, 0.5); border: 1px solid rgba(153, 153, 153, 0.5); margin: 10px 4px; outline: none; transition: all 0.24s ease-in-out;
+		button { width: 14px; height: 14px; padding: 0; border-radius: 50%; background: rgba(221, 221, 221, 0.5); border: 1px solid rgba(153, 153, 153, 0.5); margin: 10px 4px; outline: none; transition: all 0.24s ease-in-out;
 			&:hover { transform: scale(1.2); background: rgba(153, 153, 153, 0.5); }
 			&.tns-nav-active { background: rgba(153, 153, 153, 0.5); }
 		}
