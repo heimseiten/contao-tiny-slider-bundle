@@ -19,7 +19,7 @@
         "source": "https://github.com/heimseiten/contao-tiny-slider-bundle"
     },
     "require": {
-        "contao/core-bundle": "^4.4"
+        "contao/core-bundle": "^4.4 || ^5.0"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^3.0",
